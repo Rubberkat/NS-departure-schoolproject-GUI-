@@ -15,7 +15,7 @@ def zoek_reistijden(text):
     if is_geldig_station(text):
         vertrektijdendict = vertrektijden_lijst(text)
         yyy=345
-        header = Label(NS, text = 'Tijd: \tEindbestemming: \tTreinsoort: \tVertrekspoor:', font = ('Helvetica', 25, 'bold'), fg = '#000066', bg = '#F4D31A').place(x = 200, y = 300)
+        Label(NS, text = 'Tijd: \tEindbestemming: \tTreinsoort: \tVertrekspoor:', font = ('Helvetica', 25, 'bold'), fg = '#000066', bg = '#F4D31A').place(x = 200, y = 300)
         for vertrekken in vertrektijdendict['ActueleVertrekTijden']['VertrekkendeTrein']:
                 Label(NS, text = vertrekken['VertrekTijd'][11:19], font = ('Helvetica', 15, 'bold'), fg = '#000066', bg = '#F4D31A').place(x=200, y= yyy)
                 Label(NS, text = vertrekken['EindBestemming'], font = ('Helvetica', 15, 'bold'), fg = '#000066', bg = '#F4D31A').place(x=345, y=yyy)
