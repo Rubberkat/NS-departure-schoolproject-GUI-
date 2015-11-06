@@ -24,16 +24,6 @@ def create_vertreklist():
     xml_string = bestand.read()
     return xmltodict.parse(xml_string)
 
-def input_station():
-        global gekozenstation
-        station = input('Voer een station in:\n')
-        if station in lijst_stations:
-            gekozenstation  = station
-            return vertrektijden_lijst(station)
-        else:
-            print ('Station bestaat niet\n')
-            input_station()
-
 def is_geldig_station(station):
     if station in lijst_stations:
         return True
